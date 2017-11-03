@@ -7,9 +7,45 @@ https://www.khanacademy.org/computing/computer-science/algorithms/sorting-algori
 
 I havenot finished it already.If you are able to help me,thanks a lot for your value advice.
 
+
+
+fill(0,0,0);   //set fill colot to black to write text
+var x=5,y=12,x_gap=20,y_gap=20;
+
+
 var displayArray = function(array) {
+    x=5;
     textFont(createFont("monospace"), 12);
+    var i; //iterator;
+    for(i=0; i<array.length; ++i){
+        text(array[i],x,y);  //write array values
+        x+=x_gap;  //move 20 pix to right
+    }
 };
+
+var swap = function(array, firstIndex, secondIndex) {
+    var temp = array[firstIndex];
+	array[firstIndex] = array[secondIndex];
+	array[secondIndex] = temp;
+};
+
+var indexOfMinimum = function(array, startIndex) {
+    // Set initial values for minValue and minIndex,
+    // based on the leftmost entry in the subarray:  
+    var minValue = array[startIndex];
+    var minIndex = startIndex;
+
+    // Loop over items starting with startIndex, 
+    // updating minValue and minIndex as needed:
+    for(var i=minIndex+1; i < array.length; ++i ){
+        if(array[i] < minValue){
+            minIndex = i;
+            minValue = array[i];
+        }
+    }
+    return minIndex;
+}; 
+
 
 var findofmin = function(array,j){
     var min=array[j];
@@ -25,32 +61,42 @@ var findofmin = function(array,j){
 };
 
 var selectionSort = function(array) {
-    for(var i=0; i < array.length ; ++i ){
-        var min = array[i];
-        for(var j = i+1 ; j<array.length; ++j) {
-            var q = findofmin(array,j);
-            if(min > q ){
-                var tmp = min;
-                min = q;
-                q = min;
-            }
+    for(var i=0; i < array.length-1 ; ++i ){
+        displayArray(array);   //write ayyay values to canvas
+        var min = indexOfMinimum(array,i);
+        if(i !== min){ //draw only if swapped different values
+            //draw from iteration pointer to the minIndex
+            line(min * x_gap+10 ,y+5, i*x_gap+10, y+10);
+            line(i * x_gap+10 , y+5 , min*x_gap+10, y+10);
+            stroke(255,0,0);
+            noFill();  //to make transparent circles
+            //an ellipse centered at the indices with same width and height is a circle
+            ellipse(i*x_gap+8,y-4,12,12);
+            ellipse(min*x_gap+8,y-4,12,12);
+            stroke(0,0,0); //reset the stroke color for lines
         }
+        swap(array,i,min);
+        y += y_gap;
     }
+    displayArray(array);
+    y += y_gap;
 };
 
 var array = [2, 1];
-array = selectionSort(array);
-array = displayArray(array);
+selectionSort(array);
+line(x-100,y-18,x-10,y-18);  //separator between different arrays 
 
-var array1=[2,3,4,5,6,8];
-array1 = selectionSort(array1);
-array1 = displayArray(array1);
 
-var array2 =[2,3,4,99,14,56];
-array2 = selectionSort(array2);
-array2 = displayArray(array2);
+var array=[2,3,4,5,6,8];
+selectionSort(array);
+line(x-100,y-18,x-10,y-18);  //separator between different arrays 
 
-var array3 = [-3,0,34,56,12,43];
-array3 = selectionSort(array3);
-array3 = displayArray(array3);
+var array =[2,3,4,99,14,56];
+selectionSort(array);
+line(x-100,y-18,x-10,y-18);  //separator between different arrays 
+
+var array = [-3,0,34,56,12,43];
+selectionSort(array);
+line(x-100,y-18,x-10,y-18);  //separator between different arrays 
+
 
