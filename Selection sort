@@ -1,0 +1,54 @@
+possibly similar to how you sorted the cards above:
+1.Find the smallest card. Swap it with the first card.
+2.Find the second-smallest card. Swap it with the second card.
+3.Find the third-smallest card. Swap it with the third card.
+4.Repeat finding the next-smallest card, and swapping it into the correct position until the array is sorted.
+
+
+var swap = function(array, firstIndex, secondIndex) {
+    var temp = array[firstIndex];
+	array[firstIndex] = array[secondIndex];
+	array[secondIndex] = temp;
+};
+
+var indexOfMinimum = function(array, startIndex) {
+    // Set initial values for minValue and minIndex,
+    // based on the leftmost entry in the subarray:  
+    var minValue = array[startIndex];
+    var minIndex = startIndex;
+
+    // Loop over items starting with startIndex, 
+    // updating minValue and minIndex as needed:
+    for(var i=minIndex+1; i<array.length; ++i ){
+        if(array[i] < minValue){
+            minIndex = i;
+            minValue = array[i];
+        }
+    }
+    return minIndex;
+}; 
+
+
+var selectionSort = function(array) {
+    var num;
+    for(var i = 0; i < array.length ; ++i ){
+        num = indexOfMinimum(array,i);
+        swap(array,num,i);
+    }
+};
+
+var array = [22, 11, 99, 88, 9, 7, 42];
+selectionSort(array);
+println("Array after sorting:  " + array);
+
+Program.assertEqual(array, [7, 9, 11, 22, 42, 88, 99]);
+
+swap(testArray, 0, 2);
+println(testArray);
+Program.assertEqual(testArray, [4,7,9]);
+
+swap(testArray, 1, 2);
+println(testArray);
+Program.assertEqual(testArray, [4,9,7]);
+
+
