@@ -1,54 +1,56 @@
-possibly similar to how you sorted the cards above:
-1.Find the smallest card. Swap it with the first card.
-2.Find the second-smallest card. Swap it with the second card.
-3.Find the third-smallest card. Swap it with the third card.
-4.Repeat finding the next-smallest card, and swapping it into the correct position until the array is sorted.
+Your project is now pending an evaluation.
+An evaluator will either give you suggestions for improvement (which you can make and then re-request evaluation), or they will mark it as completed. Once it's marked as completed (after however many evalutions), you'll get points for it.
+In the meantime, keep learning!
 
+And the following is my project:
+https://www.khanacademy.org/computing/computer-science/algorithms/sorting-algorithms/p/project-selection-sort-visualizer
 
-var swap = function(array, firstIndex, secondIndex) {
-    var temp = array[firstIndex];
-	array[firstIndex] = array[secondIndex];
-	array[secondIndex] = temp;
+I havenot finished it already.If you are able to help me,thanks a lot for your value advice.
+
+var displayArray = function(array) {
+    textFont(createFont("monospace"), 12);
 };
 
-var indexOfMinimum = function(array, startIndex) {
-    // Set initial values for minValue and minIndex,
-    // based on the leftmost entry in the subarray:  
-    var minValue = array[startIndex];
-    var minIndex = startIndex;
-
-    // Loop over items starting with startIndex, 
-    // updating minValue and minIndex as needed:
-    for(var i=minIndex+1; i<array.length; ++i ){
-        if(array[i] < minValue){
-            minIndex = i;
-            minValue = array[i];
+var findofmin = function(array,j){
+    var min=array[j];
+    for(var i=j;i<array.length;++i){
+        var min=array[j];
+        if(array[i] < min){
+            var tmp = min;
+            min = array[i];
+            array[i] = tmp;
         }
     }
-    return minIndex;
-}; 
-
+    return min;
+};
 
 var selectionSort = function(array) {
-    var num;
-    for(var i = 0; i < array.length ; ++i ){
-        num = indexOfMinimum(array,i);
-        swap(array,num,i);
+    for(var i=0; i < array.length ; ++i ){
+        var min = array[i];
+        for(var j = i+1 ; j<array.length; ++j) {
+            var q = findofmin(array,j);
+            if(min > q ){
+                var tmp = min;
+                min = q;
+                q = min;
+            }
+        }
     }
 };
 
-var array = [22, 11, 99, 88, 9, 7, 42];
-selectionSort(array);
-println("Array after sorting:  " + array);
+var array = [2, 1];
+array = selectionSort(array);
+array = displayArray(array);
 
-Program.assertEqual(array, [7, 9, 11, 22, 42, 88, 99]);
+var array1=[2,3,4,5,6,8];
+array1 = selectionSort(array1);
+array1 = displayArray(array1);
 
-swap(testArray, 0, 2);
-println(testArray);
-Program.assertEqual(testArray, [4,7,9]);
+var array2 =[2,3,4,99,14,56];
+array2 = selectionSort(array2);
+array2 = displayArray(array2);
 
-swap(testArray, 1, 2);
-println(testArray);
-Program.assertEqual(testArray, [4,9,7]);
-
+var array3 = [-3,0,34,56,12,43];
+array3 = selectionSort(array3);
+array3 = displayArray(array3);
 
