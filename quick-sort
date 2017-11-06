@@ -1,0 +1,44 @@
+Challenge: Implement partition
+
+
+// Swaps two items in an array, changing the original array
+var swap = function(array, firstIndex, secondIndex) {
+    var temp = array[firstIndex];
+    array[firstIndex] = array[secondIndex];
+    array[secondIndex] = temp;
+};
+
+var partition = function(array, p, r) {
+    var q=p; 
+    // Compare array[j] with array[r], for j = p, p+1,...r-1
+    for(var j=p+1; j < r ; ++j){
+  // If array[j] > array[r], just increment j.
+    // If array[j] <= array[r], swap array[j] with array[q],
+    //   increment q, and increment j. 
+        if(array[j] <= array[r]){
+            swap(array,j,q);
+            ++q;
+        } 
+    }
+    // maintaining that:
+    //  array[p..q-1] are values known to be <= to array[r]
+    //  array[q..j-1] are values known to be > array[r]
+    //  array[j..r-1] haven't been compared with array[r]
+    swap(array,q,r);
+    // Once all elements in array[p..r-1]
+    //  have been compared with array[r],
+    //  swap array[r] with array[q], and return q.
+    return q;
+};
+
+var array = [9, 7, 5, 11, 12, 2, 14, 3, 10, 4, 6];
+var q = partition(array, 0, array.length-1);
+println("Array after partitioning: " + array);
+Program.assertEqual(q, 4);
+Program.assertEqual(array, [5, 2, 3, 4, 6, 7, 14, 9, 10, 11, 12]);
+
+var a1 = [0,-2,3];
+var m =partition(a1,0,a1.length-1);
+Program.assertEqual(m,1);
+Program.assertEqual(a1,[-2,3,0]);
+
