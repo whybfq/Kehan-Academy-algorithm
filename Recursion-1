@@ -1,45 +1,33 @@
-Challenge: is a string a palindrome?
-
-
-// Returns the first character of the string str
-var firstCharacter = function(str) {
-    return str.slice(0, 1);
-};
-
-// Returns the last character of a string str
-var lastCharacter = function(str) {
-    return str.slice(-1);
-};
-
-// Returns the string that results from removing the first
-//  and last characters from str
-var middleCharacters = function(str) {
-    return str.slice(1, -1);
-};
-
-var isPalindrome = function(str) {
-    // base case #1
-    if(str.length <= 1){
-        return true;
+var drawShape = function(x, y, radius) {
+    var maxX = random(radius, x);
+    var maxY = random(radius, y);
+    var drawId = floor(random(1, 5));
+    var colorR = floor(random(0, 255));
+    var colorG = floor(random(0, 255));
+    var colorB = floor(random(0, 255));
+    fill(colorR, colorG, colorB);
+    
+    if(drawId === 1){
+        rect(x, y, radius, radius/2, radius);
     }
-    // base case #2
-    if(firstCharacter(str) !== lastCharacter(str)){
-        return false;
+    else if(drawId === 2){
+        triangle(maxX, y, maxX, maxY, (x+maxX)/2, (y+maxY)/2);
     }
-    // recursive case
-    return isPalindrome(middleCharacters(str));
+    else if(drawId === 3){
+        quad(x, maxY, maxX, y, (x+maxX)/4, maxY, maxX, (y+maxY)/4);
+    }
+    else if(drawId === 4){
+        quad(maxX+x, maxY, maxX, y, maxX, maxY, x, (y+maxY));
+    }
+    else {
+        ellipse(x, y, radius, radius);
+    }
+    
+    var newRadius = radius/2;
+    if (newRadius >= 2) {
+        drawShape(maxX, maxY, newRadius);
+        drawShape(maxX*1.5, maxY*1.5, newRadius);
+    }
 };
 
-var checkPalindrome = function(str) {
-    println("Is this word a palindrome? " + str);
-    println(isPalindrome(str));
-};
-
-checkPalindrome("a");
-Program.assertEqual(isPalindrome("a"), true);
-checkPalindrome("motor");
-Program.assertEqual(isPalindrome("motor"), false);
-checkPalindrome("rotor");
-Program.assertEqual(isPalindrome("rotor"), true);
-Program.assertEqual(isPalindrome("lrotorl"), true);
-Program.assertEqual(isPalindrome("motr"), false);
+drawShape(width/2, height/2, 380);
