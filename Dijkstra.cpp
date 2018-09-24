@@ -57,7 +57,7 @@ int main() {
 
     // core code of Dijkstra algorithm
     for (i = 1;  i <= n-1 ; i++) {
-        // Find the nearest vertex from vertex 1.
+        // Find the nearest vertex from vertex 1.  Time complexity: O(N)
         min = inf;
         for (j = 1; j <= n ; j++) {
             if(book[j] == 0 && dis[j] < min){
