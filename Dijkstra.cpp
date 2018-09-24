@@ -11,7 +11,7 @@
   *@function_lists:
   *  1.
 
-  *@Time complexity: O(N^)2
+  *@Time complexity: O(N^2)
   *@warning:
   *@history:
      1.Date:
