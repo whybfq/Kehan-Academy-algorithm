@@ -7,7 +7,7 @@
   *@IDE:    Clion 2018.3
   *@OS:     macOS High Sierra 10.13.6
   *
-  *@brief: the basic use of sqlite3
+  *@brief: the Floyd-Warshall algorithm
   *@function_lists:
   *  1.
 
