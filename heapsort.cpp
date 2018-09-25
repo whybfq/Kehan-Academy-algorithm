@@ -6,7 +6,7 @@
   *@CMAKE_CXX_STANDARD 17
   *@IDE:    Clion 2018.3
   *@OS:     macOS High Sierra 10.13.6
-  *
+  *@bug:  there is not right result should be output
   *@brief:
   *@function_lists:
   *  1.
@@ -102,3 +102,11 @@ int main(int argc, char const *argv[]) {
         cout << deletemax();
     }
 }
+
+
+Input:
+14
+99 5 36 7 22 17 46 12 2 19 25 28 1 92
+ 
+Output:
+1 2 5 7 12 17 19 22 25 28 36 46 92 99
