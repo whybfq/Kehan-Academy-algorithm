@@ -7,6 +7,8 @@
   *@IDE:    Clion 2018.3
   *@OS:     macOS High Sierra 10.13.6
   *
+  *@time_complexity:  O(MlogM + MlogN) 对边进行快排O(MlogM), M条边中找出n-1条边O(MlogN)  M >> N so
+  *                  ≈ 约等于）O(MlogM)
   *@brief:
   *@function_lists:
   *  1.
