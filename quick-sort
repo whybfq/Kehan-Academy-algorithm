@@ -68,8 +68,8 @@ public:
         return nums[k];
     }
     
-    int kthLargestElement(int k, std::vector<int> sums) {
-        if (sums.size() == 0 || k < 1 || k > sums.size()) return -1;
-        return quickSelect(sums, 0, sums.size()-1, sums.size() - k);
+    int kthLargestElement(int k, std::vector<int> nums) {
+        if (nums.size() == 0 || k < 1 || k > nums.size()) return -1;
+        return quickSelect(nums, 0, nums.size()-1, nums.size() - k);
     }
 };
