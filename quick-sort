@@ -76,8 +76,8 @@ public:
 
 
 //Test
-Solution b;
-std::cout << b.kthLargestElement(3,{9,3,2,4,8});
+Solution test;
+std::cout << test.kthLargestElement(3,{9,3,2,4,8});
 
 Output:
 4
