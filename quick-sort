@@ -1,18 +1,10 @@
 Challenge: Implement partition
 
-
-// Swaps two items in an array, changing the original array
-var swap = function(array, firstIndex, secondIndex) {
-    var temp = array[firstIndex];
-    array[firstIndex] = array[secondIndex];
-    array[secondIndex] = temp;
-};
-
 var partition = function(array, p, r) {
     var q=p; 
     // Compare array[j] with array[r], for j = p, p+1,...r-1
     for(var j=p+1; j < r ; ++j){
-  // If array[j] > array[r], just increment j.
+    // If array[j] > array[r], just increment j.
     // If array[j] <= array[r], swap array[j] with array[q],
     //   increment q, and increment j. 
         if(array[j] <= array[r]){
@@ -50,6 +42,8 @@ quickSort(array, 0, array.length-1);
 println("Array after sorting: " + array);
 Program.assertEqual(array, [2,3,5,6,7,9,10,11,12,14]);
 
+
+// Uing in the object-oriented approach
 class Solution {
 public:
     /**
