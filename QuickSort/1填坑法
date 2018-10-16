@@ -1,0 +1,18 @@
+int partition(int a[], int start, int end) {  // 分段
+    int p = a[start];
+    while(start < end) {
+        while(a[end] >= p && start < end) --end;
+        a[start] = a[end];
+        while(a[start] < p && start < end) ++ start;
+        a[end] = a[start];
+    }
+    a[start] = p;
+    return start;
+}
+
+void qs(int a[], int start, int end) {    // 递归
+    if (start >= end) return;
+    int mid = partition(a, start, end);
+    qs(a, start, mid - 1);
+    qs(a, mid + 1, end);
+}
