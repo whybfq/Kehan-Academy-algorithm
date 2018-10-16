@@ -1,0 +1,18 @@
+// 这个方法和之前的交换法的思路相同，但是它不返回mid值
+
+void qs(int a[], int start, int end) {  //递归
+    if (start >= end) return;
+    int pivot = a[start];
+    int p = start;
+    int q = end;
+    while(1) {
+        while(a[p] < pivot) ++p;
+        while(a[q] > pivot) --q;
+        if(p >= q) break;
+        std::swap(a[p],a[q]);
+        ++p;
+        --q;
+    }
+    qs(a, start, p - 1);
+    qs(a, q + q, end);
+}
