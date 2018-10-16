@@ -1,0 +1,19 @@
+int partition(int a[], int start, int end) {  //分段
+    int pivot = a[start];
+    int p = start + 1;
+    int q = end;
+    while(start < end) {
+        while(a[p] < pivot && p <= q) ++p;
+        while(a[q] >= pivot && p <= q) --q;
+        if(p < q) std::swap(a[p],a[q]);
+    }
+    std::swap(a[start],a[q]);
+    return q;
+}
+
+void qs(int a[], int start, int end) {  //递归
+    if (start >= end) return;
+    int mid = partition(a, start, end);
+    qs(a, start, mid - 1);
+    qs(a, mid + 1, end);
+}
