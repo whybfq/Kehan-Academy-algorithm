@@ -12,3 +12,5 @@ function bubbleSort(arr) {
     }
     return arr;
 }
+
+More details and Optimizing the bubbleSort: https://github.com/whybfq/Cplusplus/blob/master/Sort/01BubbleSort
