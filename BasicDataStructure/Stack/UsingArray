@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+const int MAX = 101;
+
+int A[MAX] ;
+int top = -1;
+void Push(int x) {
+    if(top > MAX - 1){ printf("Error, stack overflow!");
+    top += 1;   // you can also use A[++top] = x;
+    A[top] = x;
+}
+
+void Pop(){
+    if(top == -1) {
+        cout << "No element" << endl;
+    }
+    --top;
+}
+
+int Top(){ return  A[top]; }
+
+bool IsEmpty() {
+    if(top == -1) {
+        printf("The stack is Empty now!\n" );
+        return  true;
+    }
+    else return false;
+}
+
+void Print() {
+    cout << "Stack: ";
+    for (int j = 0; j <= top; ++j) {
+        cout << A[j] << " ";
+    }
+    cout << endl;
+}
+
+int main(void) {
+    Push(2); Print();
+    Push(5); Print();
+    Pop(); Print();
+    Pop(); Print();
+    IsEmpty();
+//    Push (12); Print();
+}
