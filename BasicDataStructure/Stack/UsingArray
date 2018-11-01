@@ -1,3 +1,7 @@
+reference: https://www.youtube.com/watch?v=sFVxsglODoo 
+
+Array implementation of stack Using C98
+
 #include <stdio.h>
 
 const int MAX = 101;
@@ -12,7 +16,7 @@ void Push(int x) {
 
 void Pop(){
     if(top == -1) {
-        cout << "No element" << endl;
+        printf( "No element\n");
     }
     --top;
 }
@@ -28,15 +32,15 @@ bool IsEmpty() {
 }
 
 void Print() {
-    cout << "Stack: ";
+    printf( "Stack: ");
     for (int j = 0; j <= top; ++j) {
-        cout << A[j] << " ";
+        printf("%d " , A[j]);
     }
-    cout << endl;
+    printf("\n");
 }
 
 int main(void) {
-    Push(2); Print();
+    Push(2); Print();   // Stack: 2
     Push(5); Print();
     Pop(); Print();
     Pop(); Print();
