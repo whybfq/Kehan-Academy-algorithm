@@ -4,7 +4,7 @@ Array implementation of stack Using C98
 
 #include <stdio.h>
 
-const int MAX = 101;
+#define MAX 101
 
 int A[MAX] ;
 int top = -1;
