@@ -6,7 +6,7 @@ struct Node {   // a structure to represent a stack
     struct Node *nextaddress;
 };
 
-struct Node *top = NULL;
+struct Node *top = NULL;    // insert from the head and the time should be O(1) if insert from the end of the list the time should be O(n)
 
 void Push(int x) {
     printf("%d pushed into the stack\n", x);
