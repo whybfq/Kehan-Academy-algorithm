@@ -8,10 +8,11 @@ class  Node {   // a structure to represent a stack
 public:
     void Push(int x);
     void Pop();
+    bool IsEmpty(){ return !top; }
 private:
     int data;
     struct Node *nextaddress;
-    struct Node *top = NULL;
+    struct Node *top = NULL; //Null can also be the value of a pointer, which is the same as zero unless the CPU supports a special bit pattern for a null pointer.
 };
 
 void Node::Push(int x) {
@@ -39,6 +40,8 @@ int main(void) {
     test.Push(5);
     test.Push(3);
     test.Pop();
+    test.Pop();
+    if(test.IsEmpty() ) {
+        cout << "empty" << endl;
+    }
 }
-
-
