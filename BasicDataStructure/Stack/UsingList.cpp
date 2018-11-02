@@ -13,6 +13,7 @@ private:
     int data;
     struct Node *nextaddress;
     struct Node *top = NULL; //Null can also be the value of a pointer, which is the same as zero unless the CPU supports a special bit pattern for a null pointer.
+    // Note: In C, the null macro may have the type void* but this is not allowed in C++.
 };
 
 void Node::Push(int x) {
