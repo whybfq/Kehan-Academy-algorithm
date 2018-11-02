@@ -23,7 +23,7 @@ void Pop(){
 
 int Top(){ return  A[top]; }
 
-bool IsEmpty() {
+bool IsEmpty() {    // or just use return (top < 0);
     if(top == -1) {
         printf("The stack is Empty now!\n" );
         return  true;
