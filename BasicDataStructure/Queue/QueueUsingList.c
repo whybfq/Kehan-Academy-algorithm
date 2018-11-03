@@ -44,7 +44,7 @@ void EnQueue(int x) {
         front = rear = temp;
         return;
     } else{
-        rear->next = temp;
+        temp = rear->next;
         rear = temp;
     }
 }
