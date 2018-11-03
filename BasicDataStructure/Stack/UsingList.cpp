@@ -35,7 +35,7 @@ public:
     Node() ;
     void Push(int x);
     void Pop();
-    bool IsEmpty(){ return !top; }
+    bool IsEmpty();
 private:
     int data;
     Node *nextaddress;
@@ -45,6 +45,14 @@ private:
 Node::Node() { 
     Node *top = NULL; //Null can also be the value of a pointer, which is the same as zero unless the CPU supports a special bit pattern for a null pointer.
     // Note: In C, the null macro may have the type void* but this is not allowed in C++.
+}
+
+bool Node::IsEmpty() {
+    if(top == NULL) {
+        cout << "The stack is empty now" << endl;
+        return  true;
+    }
+    else return false;
 }
 
 void Node::Push(int x) {
