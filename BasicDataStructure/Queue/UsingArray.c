@@ -56,15 +56,15 @@ void DeQueue() {
     }
 }
 
-void Print() {
-    if(front == -1 && rear == -1) {
-        cout << " empty now \n" ;
-        return ;
-    }
-    for (int i = front; i <= rear; ++i) {
-        printf("Queue now: %d ",A[i]);
-    }
-}
+// void Print() {
+//     if(front == -1 && rear == -1) {
+//         cout << " empty now \n" ;
+//         return ;
+//     }
+//     for (int i = front; i <= rear; ++i) {
+//         printf("Queue now: %d ",A[i]);
+//     }
+// }
 
 int main(int argc, char* argv[]) {
     EnQueue(4);  // 4 enqueue
