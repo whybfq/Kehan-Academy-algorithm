@@ -9,8 +9,9 @@ struct Node {   // a structure to represent a stack
 Node *top = NULL;    // insert from the head and the time should be O(1) if insert from the end of the list the time should be O(n)
 
 void Push(int x) {
-    printf("%d pushed into the stack\n", x);
     struct Node *temp = (struct Node*)malloc(sizeof(struct Node*));  // malloc() nead headfile <stdlib.h>
+    printf("%d pushed into the stack\n", x);
+    
     temp->data = x;
     temp->nextaddress = top;
     top = temp;
@@ -18,23 +19,22 @@ void Push(int x) {
 
 void Pop() {
     Node *temp;
-    if(top == NULL) {
+    if(IsEmpty()) {
         printf("The stack is Empty now, can't pop any element\n");
         return;   // stack is empty now
     }
     printf("%d popped from stack\n", top->data);
     temp = top;
-    top = top->nextaddress;
+    top = top->nextaddress;    // pay attention to this and we need to free the memory
     free(temp);
 }
 
-//int IsEmpty(struct Node *top) {
-//    return !top;
-//}
+bool IsEmpty(Node *top) {
+   return !top;
+}
 
 int main(void) {
-    Push(3);
-    Push(5);
-    Pop();
-    Pop();
+    Push(3);  // 3 pushed into the stack
+    Pop();  // 3 popped from stack
+    Pop();  // The stack is Empty now, can't pop any element
 }
