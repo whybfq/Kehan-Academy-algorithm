@@ -36,6 +36,7 @@ public:
     Node() ;
     void EnQueue(int x);
     void DeQueue();
+    void Print();
     ~Node(){}
 private:
     int data;
@@ -51,13 +52,13 @@ Node::Node(){
 
 void Node::EnQueue(int x) {
     Node *temp = (Node*)malloc(sizeof(Node));
-    temp->data = x;
+    temp->data = x;   
     temp->next = NULL;
-    cout << x << " enqueue" << endl;
-    if(front == NULL && rear == NULL) {
+    cout << x << " enqueue" << endl;   // for test
+    if(front == NULL && rear == NULL) {  // no element in the queue
         front = rear = temp;
-    } else {
-        temp = rear->next;
+    } else {     // more than one element in the queue
+        temp = rear->next;   
         rear = temp;
     }
 }
@@ -69,11 +70,24 @@ void Node::DeQueue() {
     } else if(front == rear ){
         cout <<"The last element in queue: " << front->data << " dequeue" << endl;
         front = rear = NULL;
-    } else {
+    } else {      // more than one element in the queue
         cout << front->data << " dequeue" << endl;
         front = front->next;
     }
     free(temp);
+}
+
+void Node::Print() {
+    if(front == NULL) {
+        cout << "empty" << endl;
+    } else if(front == rear) { 
+        cout << "only one element: " << front->data << endl;
+    } else {
+        while(front->next != NULL) {
+            cout << front->data << " " ;
+            front = front->next;
+        }
+    }
 }
 
 int main(int argc, char* argv[]) {
