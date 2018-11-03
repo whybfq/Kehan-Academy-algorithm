@@ -1,9 +1,32 @@
-#include <cstdio>
+/*********************************************************************************
+  * @copyright (C)  2018 sanner All Rights Reserved
+  * @file:   QueueUsingArray.c
+  * @brief:  the basic implemention of queue using array
+  *
+  * @date: Nov 2018
+  * @bug :
+  * @author: sanner
+  *
+  * @CMAKE_CXX_STANDARD 98
+  * @IDE: Clion 2018.2
+  * @OS:  macOS 10.14
+  *
+  * @function_lists:
+  *  1.  fg: void Swap(int A[] , int i, int j   -- exchange A[i] and A[j],dtype=int
+     2.
+  * @history:
+     1.@date:
+       @author:
+       @modification: Original
+     2.@date:
+       @author:
+       @modification:
+**********************************************************************************/
+#include <stdio.h>
 
 #define MAX 11
 
 int A[MAX] = {0} ;
-
 int front = -1 ;
 int rear  = -1 ;
 
