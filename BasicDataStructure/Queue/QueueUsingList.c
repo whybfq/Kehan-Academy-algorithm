@@ -39,8 +39,8 @@ void EnQueue(int x) {
     Node *temp = (Node*)malloc(sizeof(Node));
     printf( "%d enqueue \n",x);
     temp->data = x;
-    temp->next = NULL;
-    if(front == NULL && rear == NULL) {
+    temp->next = NULL;    // the end should be NULL
+    if(front == NULL && rear == NULL) {  // There is no element
         front = rear = temp;
         return;
     } else{
@@ -53,6 +53,7 @@ void DeQueue() {
     Node* temp = front;
     if(front == NULL) return;
     if(front == rear) {
+        printf("The last element in the queue, %d dequeue\n",front->data);   
         front = rear = NULL;
     } else {
         printf("%d dequeue\n",front->data);
