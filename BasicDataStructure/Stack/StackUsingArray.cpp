@@ -33,13 +33,14 @@ const int MAX = 100;
 
 class Stack {
 public:
-    int stack[MAX];
-    Stack() { top = -1; }
+    Stack() { top = -1; stack[MAX] = {0}; }
     void push(int x);
     void pop();
     bool isEmpty();
     void Print();
+    ~Stack() { };
 private:
+    int stack[MAX];
     int top;
 };
 
@@ -48,19 +49,17 @@ void Stack::push(int x) {
         cout << "Stack Overflow";
     }
     else {
+        cout << x << " pushed into stack" << endl;
         stack[++top] = x;
-        cout << x << " pushed into stack\n";
     }
 }
-
 
 void Stack::pop() {
     if(top < 0) {
         cout << "Stack Underflow";
     }
-    else {
-        --top;
-    }
+    cout << x << " poped fron the stack" << endl;
+    --top;
 }
 
 bool Stack::isEmpty() {
@@ -75,7 +74,7 @@ void Stack::Print() {
 }
 
 int main(int argc, char* argv[]) {
-    struct Stack s;
+    Stack s;
     s.push(10);  // 10 pushed into stack
     s.Print();   // Stack noe: 10
     s.pop();
