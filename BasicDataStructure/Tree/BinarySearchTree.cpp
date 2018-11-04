@@ -81,7 +81,7 @@ int main(int argc, char* argv[]) {
      int number;
     cout << "Enter number be searched\n";
     cin >> number;
-    if(Search(root,number) == true)
+    if(Search(root,number) )
         cout << "Found" << endl;
     else {
         cout << "not found" << endl;
