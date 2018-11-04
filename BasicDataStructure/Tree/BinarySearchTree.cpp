@@ -79,12 +79,12 @@ int main(int argc, char* argv[]) {
      root = Insert(root,20);
 
      int number;
-    cout << "Enter number be searched\n";
-    cin >> number;
-    if(Search(root,number) )
-        cout << "Found" << endl;
-    else {
-        cout << "not found" << endl;
-    }
+     cout << "Enter number be searched\n";
+     cin >> number;
+     if(Search(root,number) )
+         cout << "Found" << endl;
+     else {
+         cout << "not found" << endl;
+     }
 }
 
