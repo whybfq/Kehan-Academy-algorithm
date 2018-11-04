@@ -54,7 +54,7 @@ BstNode *GetNewNode(int data) {  // the first node
 }
 
 BstNode *Insert(BstNode *root, int data) {   // O(1) // this root is local variable
-    if(root == NULL){ // empty tree
+    if(root == NULL){ // empty tree    // (root->left == NULL && root->right=NULL) means maybe only one node
         root = GetNewNode(data);  // the first node
         return root; // root is local variable so return type of insert function will not be void
     } else if (data <= root->data) { // data is less or equal (<=) than the root
