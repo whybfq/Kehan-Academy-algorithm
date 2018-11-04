@@ -56,7 +56,7 @@ BstNode *GetNewNode(int data) {  // the first node
 BstNode *Insert(BstNode *root, int data) {   // O(1) // this root is local variable
     if(root == NULL){ // empty tree
         root = GetNewNode(data);  // the first node
-        return root;
+        return root; // root is local variable so return type of insert function will not be void
     } else if (data <= root->data) { // data is less or equal (<=) than the root
         root->left = Insert(root->left,data);
     } else { // data is larger than root
@@ -64,6 +64,13 @@ BstNode *Insert(BstNode *root, int data) {   // O(1) // this root is local varia
     }
     return root;
 }
+
+// another way to implement Insert() or you can use root as global variable
+//void Insert1(BstNode** root, int data) { // using ** and The following call would be Insert(&root,25);
+//    if(*root == NULL) {
+//        *root = GetNewNode(data);
+//    }
+//}
 
 int main(int argc, char* argv[]) {
      BstNode *root = NULL; // creat an empty tree
