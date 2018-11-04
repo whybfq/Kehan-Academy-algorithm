@@ -58,9 +58,9 @@ BstNode *Insert(BstNode *root, int data) {   // O(1) // this root is local varia
         root = GetNewNode(data);  // the first node
         return root; // root is local variable so return type of insert function will not be void
     } else if (data <= root->data) { // data is less or equal (<=) than the root
-        root->left = Insert(root->left,data);
+        root->left = Insert(root->left,data);  // !!Note the root->left in the beginning
     } else { // data is larger than root
-        root->right = Insert(root->right,data);
+        root->right = Insert(root->right,data);  // Note the root->right in the beginning
     }
     return root;
 }
