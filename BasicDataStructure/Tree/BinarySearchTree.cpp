@@ -31,8 +31,7 @@ using std:: endl;
 
 struct BstNode {
     int data;
-    BstNode *left;
-    BstNode *right;
+    struct BstNode *left, *right;
 };
 
 // using array or Linked List are the same
