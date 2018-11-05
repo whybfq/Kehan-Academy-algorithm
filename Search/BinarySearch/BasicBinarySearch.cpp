@@ -1,7 +1,7 @@
 /*********************************************************************************
   * @copyright (C)  2018 sanner All Rights Reserved
-  * @file:   BinarySearch.cpp
-  * @brief:  
+  * @file:   BasicBinarySearch.cpp .  
+  * @brief:  A simple example for binary search
   *
   * @date: Nov 2018
   * @bug :
