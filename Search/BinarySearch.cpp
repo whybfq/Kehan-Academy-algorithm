@@ -48,7 +48,7 @@ int main() {
     int index = BinarySearch(A,5,n);
     if(index != -1) 
     {
-        cout <<  "number " << n << " is at " << index << endl;
+        cout <<  "one number equal to " << n << " is at " << index << endl;
     } else 
     {
         cout << "not found " << endl;
@@ -61,4 +61,4 @@ Enter a number: 5
 
 Output:
 
-number 5 is at 2
+one number equal to 5 is at 2
