@@ -27,7 +27,8 @@
 
 #include <iostream>
 
-using namespace std;
+using std:: cout;
+using std:: endl;
 
 const int MAX = 100;
 
@@ -46,12 +47,12 @@ private:
 
 Stack::Stack() {
     top = -1;
-    stack[MAX] = {0}; 
+//     stack[MAX] = {0}; 
 }
 
 void Stack::push(int x) {
     if(top > MAX) {
-        cout << "Stack Overflow";
+        cout << "Stack Overflow" << endl;;
     }
     else {
         cout << x << " pushed into stack" << endl;
@@ -61,9 +62,9 @@ void Stack::push(int x) {
 
 void Stack::pop() {
     if(top < 0) {
-        cout << "Stack Underflow";
+        cout << " Stack Underflow " << endl;;
     }
-    cout << x << " poped fron the stack" << endl;
+    cout << x << " poped " << endl;
     --top;
 }
 
@@ -84,6 +85,6 @@ int main(int argc, char* argv[]) {
     Stack s;
     s.push(10);  // 10 pushed into stack
     s.Print();   // Stack now: 10
-    s.pop();
+    s.pop();     // 10 poped 
     s.Print();   // empty now
 }
