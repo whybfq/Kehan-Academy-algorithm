@@ -46,7 +46,7 @@ struct Node
 
 /* Given a binary tree, print its nodes according to the
 "bottom-up" postorder traversal. */
-void printPostorder(struct Node* node)
+void printPostorder(struct Node* node)    // <root> <left-subtree> <right-subtree>
 {
     if (node == NULL)
         return;
@@ -62,7 +62,7 @@ void printPostorder(struct Node* node)
 }
 
 /* Given a binary tree, print its nodes in inorder*/
-void printInorder(struct Node* node)
+void printInorder(struct Node* node)    // <left-subtree> <root> <right-subtree>
 {
     if (node == NULL)
         return;
