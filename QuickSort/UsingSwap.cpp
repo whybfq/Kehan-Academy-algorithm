@@ -28,6 +28,7 @@ using std:: cin ;
 using std:: cout;
 using std:: endl;
 using std:: swap;
+
 int Partition(int *A, int start, int end) {
     int pivot = A[end];
     int partitionIndex = start; // set partition index as start initially
@@ -43,7 +44,7 @@ int Partition(int *A, int start, int end) {
 }
 
 int QuickSort(int *A, int start, int end) {
-//    if(start > end) return -1;
+    //  you can also consider to use: if(start > end) return -1;
     if(start <= end) {
         int partitionIndex = Partition(A,start,end);
         QuickSort(A,start,partitionIndex-1);
@@ -56,7 +57,6 @@ int main() {
     int n = sizeof(A)/ sizeof(A[0]);  // n = 4
     QuickSort(A,0,n-1);
     for (int i = 0; i < n; ++i) {
-        cout << A[i] << " ";
+        cout << A[i] << " ";   // 1 2 8 34
     }
 }
-
