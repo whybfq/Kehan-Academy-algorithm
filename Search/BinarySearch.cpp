@@ -1,7 +1,7 @@
 /*********************************************************************************
   * @copyright (C)  2018 sanner All Rights Reserved
   * @file:   BinarySearch.cpp
-  * @brief:  Traversals (Inorder, Preorder and Postorder
+  * @brief:  
   *
   * @date: Nov 2018
   * @bug :
