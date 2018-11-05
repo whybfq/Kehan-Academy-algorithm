@@ -29,8 +29,6 @@ using std:: cin ;
 using std:: cout;
 using std:: endl;
 
-// C program for different tree traversals
-
 /* A binary tree node has data, pointer to left child
 and a pointer to right child */
 struct Node
