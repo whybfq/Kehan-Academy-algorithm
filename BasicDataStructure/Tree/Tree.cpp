@@ -1,18 +1,19 @@
 /*********************************************************************************
   * @copyright (C)  2018 sanner All Rights Reserved
-  * @file:  Tree.cpp
-  * @brief:
+  * @file:   Tree.cpp
+  * @brief:  Traversals (Inorder, Preorder and Postorder
+  *          Reference: https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
   *
-  * @date: Nov 2018
+  * @date:   Nov 2018
   * @bug :
   * @author: sanner
   *
   * @CMAKE_CXX_STANDARD 14
-  * @IDE: Clion 2018.2
-  * @OS:  macOS 10.14
+  * @IDE:    Clion 2018.2
+  * @OS:     macOS 10.14
   *
   * @function_lists:
-  *  1.  fg: void Swap(int A[] , int i, int j   -- exchange A[i] and A[j],dtype=int
+  *  1.      fg: void Swap(int A[] , int i, int j   -- exchange A[i] and A[j],dtype=int
      2.
   * @history:
      1.@date:
@@ -109,7 +110,13 @@ int main()
 
     cout << "\nPostorder traversal of binary tree is \n";
     printPostorder(root);
-
-    return 0;
 }
 
+Output:
+
+Preorder traversal of binary tree is 
+1 2 4 5 3 
+Inorder traversal of binary tree is 
+4 2 5 1 3 
+Postorder traversal of binary tree is 
+4 5 2 3 1
