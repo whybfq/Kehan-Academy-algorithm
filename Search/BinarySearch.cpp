@@ -28,11 +28,6 @@ using std:: cin ;
 using std:: cout;
 using std:: endl;
 
-//using std:: unique_ptr;
-//using std:: shared_ptr;
-//using std:: make_unique;
-//using std:: make_shared;
-
 int BinarySearch(int A[], int n, int x) {
     int low = 0, high = n - 1;
     while (low <= high)  // attention <=
@@ -42,8 +37,7 @@ int BinarySearch(int A[], int n, int x) {
         else if(x < A[mid]) high = mid - 1;
         else low = mid + 1;
     }
-    cout << "not found x ine A[]" << endl;
-    return -1;
+    return -1;   //  cout << "not found x ine A[]" << endl;
 }
 
 int main() {
@@ -52,10 +46,12 @@ int main() {
     cout << "Enter a number: ";
     cin >> n;
     int index = BinarySearch(A,5,n);
-    if(index != -1) {
+    if(index != -1) 
+    {
         cout <<  "number " << n << " is at " << index << endl;
-    } else {
-        cout << "not found" << endl;
+    } else 
+    {
+        cout << "not found " << endl;
     }
 }
 
