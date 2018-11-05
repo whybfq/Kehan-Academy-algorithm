@@ -37,7 +37,7 @@ int BinarySearch(int A[], int n, int x) {
         else if(x < A[mid]) high = mid - 1; // or use recursive:  return BinarySearch(A, low, mid-1);
         else low = mid + 1;    // return BinarySearch(A,mid+1,high)
     }
-    return -1;   //  cout << "not found x ine A[]" << endl;
+    return -1;   //  cout << "not found x in A[]" << endl;
 }
 
 int main() {
