@@ -73,15 +73,17 @@ bool Stack::isEmpty() {
 
 void Stack::Print() {
     if(top == -1) { cout << "\nempty now" ; }
+    cout << "Stack now: " ;
     for (int i = 0; i <= top; ++i) {
-        cout << "Stack now: "<< stack[i] << " ";
-    }
+        cout << stack[i] << " ";
+    } 
+    cout << endl;
 }
 
 int main(int argc, char* argv[]) {
     Stack s;
     s.push(10);  // 10 pushed into stack
-    s.Print();   // Stack noe: 10
+    s.Print();   // Stack now: 10
     s.pop();
     s.Print();   // empty now
 }
