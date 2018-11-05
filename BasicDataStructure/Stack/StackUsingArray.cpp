@@ -33,7 +33,7 @@ const int MAX = 100;
 
 class Stack {
 public:
-    Stack() { top = -1; stack[MAX] = {0}; }
+    Stack() ;
     void push(int x);
     void pop();
     bool isEmpty();
@@ -44,8 +44,13 @@ private:
     int top;
 };
 
+Stack::Stack() {
+    top = -1;
+    stack[MAX] = {0}; 
+}
+
 void Stack::push(int x) {
-    if(top >= (MAX-1)) {
+    if(top > MAX) {
         cout << "Stack Overflow";
     }
     else {
