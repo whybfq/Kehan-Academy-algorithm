@@ -48,8 +48,7 @@ private:
 };
 
 Node::Node(){
-    rear = NULL;
-    front = NULL;
+    rear = front = next = NULL;
 }
 
 void Node::EnQueue(int x) {
