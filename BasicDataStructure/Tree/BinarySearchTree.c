@@ -1,6 +1,6 @@
 /*********************************************************************************
   * @copyright (C)  2018 sanner All Rights Reserved
-  * @file:   BinarySearchTree.cpp
+  * @file:   BinarySearchTree.c
   * @brief:  setting tree as empty
   * .        BstNode *root = NULL; // store the address of root node
   *
@@ -13,8 +13,8 @@
   * @OS:     macOS 10.14
   *
   * @function_lists:
-  *  1.  fg: void Swap(int A[] , int i, int j   -- exchange A[i] and A[j],dtype=int
-     2.
+  *  1.   bool Search(BstNode* root, int data)  -> search a number in the tree
+     2.BstNode *Insert(BstNode *root, int data) -> insert a number, return BstNode*
   * @history:
      1.@date:
        @author:
