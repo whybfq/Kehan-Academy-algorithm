@@ -77,5 +77,4 @@ int main(int argc, char* argv[]) {
     queue1.EnQueue(5);   // 5 enqueue 
     queue1.EnQueue(4);   // 4 enqueue
     queue1.DeQueue();    // 5 dequeue
-    return 0;
 }
