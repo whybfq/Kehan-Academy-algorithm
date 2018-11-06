@@ -1,16 +1,16 @@
 /*********************************************************************************
   * @copyright (C)  2018 sanner All Rights Reserved
-  * @file:   QueueUsingArray.cpp
-  * @brief:  Using array to implement the queue   
-  *          First in First out   / FIFO
+  * @file: QueueUsingArray.cpp
+  * @brief:Using array to implement the queue
+  *        First in First out   / FIFO
   *
   * @date: Nov 2018
   * @bug :
   * @author: sanner
   *
   * @CMAKE_CXX_STANDARD 14
-  * @IDE: Clion 2018.2
-  * @OS:  macOS 10.14
+  * @IDE:  Clion 2018.2
+  * @OS:   macOS 10.14
   *
   * @function_lists:
   *  1.   void EnQueue(int x)     -> an element enter  the queue
