@@ -93,7 +93,7 @@ void Node::Print() {
 int main(int argc, char* argv[]) {
     Node node1;
     node1.EnQueue(5);   // 5 enqueue
-    node1.DeQueue();    // Only the last element is left in the queue
+    node1.DeQueue();    // The last element in queue
     node1.DeQueue();    // Queue is empty now
 }
 
