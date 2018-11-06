@@ -58,7 +58,7 @@ void Node::EnQueue(int x) {
     if(front == NULL && rear == NULL) {  // no element in the queue
         front = rear = temp;
     } else {     // more than one element in the queue
-        temp = rear->next;   
+        temp = rear->next;   // temp = NULL;
         rear = temp;
     }
 }
