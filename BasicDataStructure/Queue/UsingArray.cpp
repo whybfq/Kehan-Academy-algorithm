@@ -1,4 +1,4 @@
-/*********************************************************************************
+/******************************************************************
   * @copyright (C)  2018 sanner All Rights Reserved
   * @file: QueueUsingArray.cpp
   * @brief:Using array to implement the queue
@@ -22,7 +22,7 @@
      2.@date:
        @author:
        @modification:
-**********************************************************************************/
+******************************************************************/
 #include <iostream>
 
 //using std:: cin ;
@@ -56,8 +56,8 @@ void Queue::EnQueue(int x) {
     } else {
         ++rear;
     }
-    cout << x << " enqueue " << endl;  // the common steps of the above two steps
-    queue[rear] = x;
+    cout << x << " enqueue " << endl; 
+    queue[rear] = x;    //common steps of the above two steps
 }
 
 void Queue::DeQueue() {
