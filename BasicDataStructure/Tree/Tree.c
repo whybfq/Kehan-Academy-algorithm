@@ -1,6 +1,6 @@
 /*********************************************************************************
   * @copyright (C)  2018 sanner All Rights Reserved
-  * @file:   Tree.cpp
+  * @file:   Tree.c
   * @brief:  Traversals (Inorder, Preorder and Postorder
   *          Reference: https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
   *
