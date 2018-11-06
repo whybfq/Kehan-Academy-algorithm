@@ -51,7 +51,7 @@ Node::Node(){
 }
 
 void Node::EnQueue(int x) {
-    Node *temp = (Node*)malloc(sizeof(Node));
+    Node * temp = new Node(); // Node *temp = (Node*)malloc(sizeof(Node));
     temp->data = x;   
     temp->next = NULL;
     cout << x << " enqueue" << endl;   // for test
