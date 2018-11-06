@@ -25,7 +25,7 @@
        @author:
        @modification:
 **********************************************************************************/
-#include <cstdlib>
+// #include <cstdlib>
 #include <iostream>
 
 using std:: cout;
@@ -95,6 +95,5 @@ int main(int argc, char* argv[]) {
     node1.EnQueue(5);   // 5 enqueue
     node1.DeQueue();    // Only the last element is left in the queue
     node1.DeQueue();    // Queue is empty now
-    return 0;
 }
 
