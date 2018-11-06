@@ -39,8 +39,8 @@ void EnQueue(int x) {
     } else {
         ++rear ;
     }
-    A[rear] = x;
     printf("%d enqueue\n",x ) ;
+    A[rear] = x;
 }
 
 void DeQueue() {
