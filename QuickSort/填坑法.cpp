@@ -60,6 +60,6 @@ int main(int argc, char* argv[]) {
     QuickSort(A,0,n);
 
     for (int i = 0; i < n; ++i) {
-        cout << A[i] << " ";
+        cout << A[i] << " ";    // 1 3 4 23 56 
     }
 }
