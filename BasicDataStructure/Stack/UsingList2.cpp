@@ -46,7 +46,7 @@ private:
 };
 
 Node::Node() {
-    Node *top = NULL;
+    top = NULL;
 }
 
 void Node::Push(int x) {
