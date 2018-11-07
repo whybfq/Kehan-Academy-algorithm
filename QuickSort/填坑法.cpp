@@ -39,13 +39,13 @@ int partition(int *A, int s,int e){
     while(s < e) {
         while(A[s] < A[pivot] && s < e) ++s;
         swap(A[s],A[pivot]);  pivot = s;
-        while(A[s] >= A[pivot] && s < e) --e;
+        while(A[e] >= A[pivot] && s < e) --e;
         swap(A[e],A[pivot]); pivot = e;
     }
-    A[e] = A[pivot];
+//    A[e] = A[pivot];
     return pivot ;
 }
-
+                                               
 void QuickSort(int *A, int s, int e) {
     if(s < e) {
         int pIndex = partition(A,s,e);
