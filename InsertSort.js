@@ -22,4 +22,3 @@ var array = [22, 11, 99, 88, -2, 0, 42];
 insertionSort(array);
 println("Array after sorting:  " + array);
 Program.assertEqual(array, [-2, 0, 11, 22, 42, 88, 99]);
-
