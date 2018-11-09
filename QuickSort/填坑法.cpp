@@ -47,11 +47,11 @@ int partition(int *A, int s,int e){
 }
                                                
 void QuickSort(int *A, int s, int e) {
-    if(s < e) {
-        int pIndex = partition(A,s,e);
-        QuickSort(A, s,pIndex-1);
-        QuickSort(A,pIndex+1,e);
-    }
+     if(s > e) return ;
+     int pIndex = partition(A,s,e);
+     QuickSort(A, s,pIndex-1);
+     QuickSort(A,pIndex+1,e);
+    
 }
 
 int main(int argc, char* argv[]) {
