@@ -66,8 +66,8 @@ BstTree* BstTree::Insert(BstTree *root, int data) {
 
 bool BstTree::Search(BstTree *root, int data) {
     if(root == nullptr) return false;
-    else if(root->data == data ) return true;
-    else if(root <= root->left) return Search(root->left, data);
+    else if(data == root->data) return true;
+    else if(data <= root->data) return Search(root->left, data);
     else return Search(root->right,data);
 }
 
