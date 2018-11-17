@@ -24,61 +24,65 @@
        @author:
        @modification:
 ******************************************************************/
+
 #include <iostream>
 
-class BstNode {
+using std::cin;
+using std::cout;
+using std::endl;
+
+class BstTree{
 public:
-    bool Search(BstNode*root, int data);
-    BstNode *Insert(BstNode *root, int data);
-    BstNode *GetNewNode(int data);
+    BstTree();
+    BstTree *GetNewNode(int data);
+    BstTree *Insert(BstTree *root,int data);
+    bool Search(BstTree *root,int data);
 private:
     int data;
-    BstNode *left, *right;
+    BstTree *left, *right;
 };
 
-bool BstNode::Search(BstNode*root, int data) {
-    if(root == NULL) return false   ;
-    else if(root->data == data) return true;
-    else if(root <= root->left) return Search(root->left, data);
-    else return Search(root->right, data);
+BstTree::BstTree() {
+    left = right = nullptr;
 }
 
-BstNode *BstNode::GetNewNode(int data)
-{
-    BstNode *newnode = new BstNode();
+BstTree* BstTree::GetNewNode(int data) {
+    BstTree *newnode = new BstTree();
     newnode->data = data;
-    newnode->left = newnode->right = NULL  ;
+    newnode->left = newnode->right = nullptr;
     return newnode;
 }
 
-BstNode *BstNode::Insert(BstNode *root, int data)
-{
-    if(root == NULL) {
-        BstNode *newnode = new BstNode();
-        newnode->data = data;
-        newnode->left = newnode->right = NULL;
-        return newnode;
-    }
-    else if(data <= root->data) {
+BstTree* BstTree::Insert(BstTree *root, int data) {
+    if(root == nullptr) {
+        return  GetNewNode(data);
+    } else if(data <= root->data) {
         root->left = Insert(root->left, data);
     } else {
-        root->right = Insert(root->right,data);
+        root->right = Insert(root->right, data);
     }
     return root;
 }
 
+bool BstTree::Search(BstTree *root, int data) {
+    if(root == nullptr) return false;
+    else if(root->data == data ) return true;
+    else if(root <= root->left) return Search(root->left, data);
+    else return Search(root->right,data);
+}
+
 int main(int argc, char* argv[]) {
-    BstNode *root = NULL    ; // create an empty tree
+    BstTree *root = nullptr;   // create an empty tree
     root->Insert(root,15);
-    root->Insert(root,225);
+    root->Insert(root,223);
     root->Insert(root,123);
 
     int number;
-    std::cout << "Enter a number: ";
-    std::cin >> number;
+    cout << "Enter a number: ";
+    cin >> number;
     if(root->Search(root,number)) {
-        std::cout << "found" << std::endl;
+        cout << " found "  << endl;
     } else {
-        std::cout << "not found" << std::endl;
+        cout << " not found "  << endl;
     }
 }
