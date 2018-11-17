@@ -54,7 +54,7 @@ void Queue::EnQueue(int x) {
     } else if (front == -1 && rear == -1){
         front = rear = 0;
     } else {
-        ++rear;
+        ++ rear;
     }
     cout << x << " enqueue " << endl; 
     queue[rear] = x;    //common steps of the above two steps
@@ -64,12 +64,11 @@ void Queue::DeQueue() {
     if(front == -1) {
         cout << "empty,can't dequeue" << endl; return;
     } else if(front == rear) {
-        cout << queue[front] << " dequeue" << endl;
         front = rear = -1;
     } else {
-        cout << queue[front] << " dequeue" << endl;
-        ++front;
+        ++ front;
     }
+    cout << queue[front] << " dequeue" << endl;
 }
 
 int main(int argc, char* argv[]) {
