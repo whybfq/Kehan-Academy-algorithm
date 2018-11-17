@@ -52,11 +52,12 @@ void EnQueue(int x) {
 void DeQueue() {
     Node* temp = front;
     if(front == NULL) return;
+    printf("%d dequeue\n",front->data);
     if(front == rear) {
-        printf("The last element in the queue, %d dequeue\n",front->data);   
+//         printf("The last element in the queue, %d dequeue\n",front->data);   
         front = rear = NULL;
     } else {
-        printf("%d dequeue\n",front->data);
+//         printf("%d dequeue\n",front->data);
         front = front->next;
     }
     free(temp);
