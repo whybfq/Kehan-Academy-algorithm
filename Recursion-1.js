@@ -1,6 +1,5 @@
 Challenge: is a string a palindrome?
 
-
 // Returns the first character of the string str
 var firstCharacter = function(str) {
     return str.slice(0, 1);
