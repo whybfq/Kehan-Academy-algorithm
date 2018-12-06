@@ -54,8 +54,8 @@ int QuickSort(int *A, int start, int end) {
 
 int main() {
     int A[] = {1,8,34,2};
-    int n = sizeof(A)/ sizeof(A[0]);  // n = 4
-    QuickSort(A,0,n-1);
+    int n = sizeof(A) / sizeof(A[0]);  // n = 4
+    QuickSort(A, 0, n-1);
     for (int i = 0; i < n; ++i) {
         cout << A[i] << " ";   // 1 2 8 34
     }
