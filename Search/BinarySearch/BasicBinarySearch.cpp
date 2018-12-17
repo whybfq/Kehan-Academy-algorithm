@@ -56,9 +56,7 @@ int main() {
 }
 
 Input:
-
 Enter a number: 5
 
 Output:
-
 one number equal to 5 is at 2
