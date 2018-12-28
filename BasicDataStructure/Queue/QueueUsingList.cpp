@@ -1,14 +1,14 @@
 /******************************************************************
   * @copyright (C)  2018 sanner All Rights Reserved
-  * @file: QueueUsingList.cpp
-  * @brief:Using list to implement the queue
-  *        First in First out   / FIFO
-  *        when it is a RingQueue :
+  * @file:  QueueUsingList.cpp
+  * @brief: Using list to implement the queue
+  *         First in First out   / FIFO
+  *         when it is a RingQueue :
   *            if current position = i
   *            next position = (i + 1) % N
   *            previous position = (i - 1 + N) % N
   *
-  * @date: Nov 2018
+  * @date:  Nov 2018
   * @bug :
   * @author: sanner
   *
@@ -97,5 +97,8 @@ int main(int argc, char* argv[]) {
     node1.Print();      // only one element: 5
     node1.DeQueue();    // The last element in queue
     node1.DeQueue();    // Queue is empty now
-}
 
+    node1.DeQueue();    // Queue is empty no
+    node1.DeQueue();    // Queue is empty now
+    node1.DeQueue();    // Queue is empty now
+}
