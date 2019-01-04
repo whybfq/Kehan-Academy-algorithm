@@ -22,11 +22,6 @@
        @modification:
 **********************************************************************************/
 #include <iostream>
-#include <iomanip>
-#include <cmath>
-#include <cstring>
-#include <string>
-
 using std:: cin;
 using std:: cout;
 using std:: endl;
