@@ -47,7 +47,7 @@ void Insert(int x) {
     head = temp;
 }
 
-void Print() {
+void Print() { //if we modify the haed will lose the reference of the first 
     Node *temp = head;
     while(temp != nullptr) {
         cout << temp->data << " ";
