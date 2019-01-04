@@ -47,6 +47,24 @@ void Insert(int x) {
     head = temp;
 }
 
+////  if head is local variable
+//void Insert1(Node **head,int x) {  // The following will become: Insert1(&head,x)
+//    Node *temp = (Node*)malloc(sizeof(Node));
+//    temp -> data = x;
+//    temp -> next = *head;
+//    *head = temp;
+//}
+
+
+// Node *Insert2(Node *head,int x) {  // The following will becom: head = Insert(head,x)
+//     Node *temp = (Node*)malloc(sizeof(Node));
+//     temp->data = x;
+//     temp->next = head; // temp->next = nullptr
+//                        // if(head != nullptr) temmp->next = head;
+//     head   = temp;
+//     return head;
+// }
+
 void Print() { //if we modify the haed will lose the reference of the first
     Node *temp = head;
     while(temp != nullptr) {
