@@ -3,7 +3,7 @@
   * @license: GPL
   * @version:
   * @data:    Jan 2019
-  * @file:    BasicList.c
+  * @file:    BasicList. c
   * @related:
   * @reference:
   * @brief:
@@ -47,7 +47,7 @@ void Insert(int x) {
     head = temp;
 }
 
-void Print() { //if we modify the haed will lose the reference of the first 
+void Print() { //if we modify the haed will lose the reference of the first
     Node *temp = head;
     while(temp != nullptr) {
         cout << temp->data << " ";
@@ -56,28 +56,29 @@ void Print() { //if we modify the haed will lose the reference of the first
 }
 
 int main(int argc, char* argv[]) {
-    Node *head = nullptr; // empty list
-    cout << "How many numbers " << endl;
+    head = nullptr; // empty list
+    cout << "How many numbers:" << endl;
     int n,i,x;
     cin >> n;
     for (int j = 0; j < n; ++j) {
-        cout << "enter the number " << endl;
+        cout << "\nenter the number:\n" ;
         cin >> x;
         Insert(x);
         Print();
     }
 }
 
-
 Output:
 
-How many numbers 
+How many numbers:
 3
-enter the number 
-1
-1 enter the number 
-3
-3 1 enter the number 
-5
-5 3 1 
-Process finished with exit code 
+
+enter the number:
+12
+12 
+enter the number:
+23
+23 12 
+enter the number:
+34
+34 23 12 
