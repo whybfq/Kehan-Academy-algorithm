@@ -40,7 +40,7 @@ struct Node {
 struct Node *head = nullptr; // global variable
 
 void Insert(int x) {
-    Node *temp = (Node*)malloc(sizeof(Node));
+    Node *temp = new Node(); //Node *temp = (Node*)malloc(sizeof(Node));
     temp->data = x;
     temp->next = head; // temp->next = nullptr
                        // if(head != nullptr) temmp->next = head;
