@@ -66,3 +66,12 @@ int main(int argc, char* argv[]) {
     Pop(); Print();
     if(IsEmpty()) printf("The stack is empty now\n");
 }
+
+
+Output:
+
+The Stack is: 2 
+The Stack is: 2 14 
+The Stack is: 2 
+The Stack is: 
+The stack is empty now
