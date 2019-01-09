@@ -55,7 +55,7 @@ void Stack::push(int x) {
     }
     else {
         cout << x << " pushed into stack" << endl;
-        stack[++top] = x;
+        stack[++top] = x;   // must use ++top, since top = top + 1; first , then top = x;
     }
 }
 
