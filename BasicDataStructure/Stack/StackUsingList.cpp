@@ -55,7 +55,7 @@ bool Stack::IsEmpty() {
 
 void Stack::Push(int x) {
     auto *temp = new Stack;  // malloc() nead headfile <stdlib.h> // Stack *temp = new Stack;
-    printf("%d pushed into the stack\n", x);
+    printf("%d is pushed into the stack\n", x);
     temp->data = x;
     temp->nextaddress = top;
     top = temp;
@@ -64,7 +64,7 @@ void Stack::Push(int x) {
 void Stack::Pop() {
     auto *temp = new Stack;
     if(top == NULL) {  // if(IsEmpty())
-        printf("The stack is Empty now, can't pop any element\n");
+        printf("The stack is empty now, can't pop any element\n");
         return;   // stack is empty now
     }
     printf("%d popped from stack\n", top->data);
@@ -81,7 +81,7 @@ int main(void) {
 }
 
 Output:
-3 pushed into the stack
-3 popped from stack
-The stack is Empty now, can't pop any element
+3 is pushed into the stack
+3 is popped from stack
+The stack is empty now, can't pop any element
 
