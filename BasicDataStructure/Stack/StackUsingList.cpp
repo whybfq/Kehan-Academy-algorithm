@@ -54,7 +54,7 @@ bool Stack::IsEmpty() {
 }
 
 void Stack::Push(int x) {
-    Stack *temp = new Stack;  // malloc() nead headfile <stdlib.h>
+    auto *temp = new Stack;  // malloc() nead headfile <stdlib.h> // Stack *temp = new Stack;
     printf("%d pushed into the stack\n", x);
     temp->data = x;
     temp->nextaddress = top;
@@ -62,7 +62,7 @@ void Stack::Push(int x) {
 }
 
 void Stack::Pop() {
-    Stack *temp = new Stack;
+    auto *temp = new Stack;
     if(top == NULL) {  // if(IsEmpty())
         printf("The stack is Empty now, can't pop any element\n");
         return;   // stack is empty now
