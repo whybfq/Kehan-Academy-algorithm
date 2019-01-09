@@ -69,15 +69,15 @@ void Print() { //if we modify the haed will lose the reference of the first
 }
 
 int main(int argc, char* argv[]) {
-    head = nullptr; // empty list
+    // head = nullptr; // empty list is head is local variable
     cout << "How many numbers:" << endl;
     int n,i,x;
     cin >> n;
     for (int j = 0; j < n; ++j) {
         cout << "\nenter the number:\n" ;
         cin >> x;
-        Insert(x);
-        Print();
+        Insert(x);   // head = Insert(head, x) if head is local variable
+        Print();    // Print(head) if head is local variable
     }
 }
 
