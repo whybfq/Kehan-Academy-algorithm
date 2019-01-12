@@ -63,7 +63,7 @@ void Stack::pop() {
     if(top < 0) {
         cout << " Stack Underflow " << endl;;
     }
-    cout << x << " poped " << endl;
+    cout << stack[top] << " poped " << endl;
     --top;
 }
 
