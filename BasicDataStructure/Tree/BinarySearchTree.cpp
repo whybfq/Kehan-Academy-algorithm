@@ -2,11 +2,8 @@
   * @copyright (C)  2018 sanner All Rights Reserved
   * @file: BinarySearchTree.cpp
   * @brief:
-  *
-  *
-  * @date: Nov 2018
-  * @bug : there seems to be some errors in the program. The root is always NULL 
-  * .      and if you input 15 output expected is "found" while it would be "not found"
+  * @date: Jan 2019
+  * @bug :
   * @author: sanner
   *
   * @CMAKE_CXX_STANDARD 14
@@ -17,9 +14,9 @@
   *  1.   bool Search(BstNode* root, int data)  -> search a number in the tree
      2.BstNode *Insert(BstNode *root, int data) -> insert a number, return BstNode*
   * @history:
-     1.@date:
+     1.@date: Jan 2019
        @author:
-       @modification:
+       @modification: choose root->Insert(root,15) to root=root->Insert(root,15);
      2.@date:
        @author:
        @modification:
@@ -73,16 +70,16 @@ bool BstTree::Search(BstTree *root, int data) {
 
 int main(int argc, char* argv[]) {
     BstTree *root = nullptr;   // create an empty tree
-    root->Insert(root,15);
-    root->Insert(root,223);
-    root->Insert(root,123);
+    root = root->Insert(root,15);
+    root = root->Insert(root,223);
+    root = root->Insert(root,123);
 
     int number;
     cout << "Enter a number: ";
     cin >> number;
     if(root->Search(root,number)) {
-        cout << " found "  << endl;
+        cout << "found"  << endl;
     } else {
-        cout << " not found "  << endl;
+        cout << "not found"  << endl;
     }
 }
