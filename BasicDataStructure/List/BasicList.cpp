@@ -84,3 +84,12 @@ int main(int argc, char* argv[]) {
     test.Remove();
 
 }
+
+
+Output:
+32 being inserted 
+54 being inserted 
+54 is popped 
+32 
+32 is popped 
+It is alreay empty 
