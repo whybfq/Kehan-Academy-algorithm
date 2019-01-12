@@ -57,7 +57,7 @@ void Node::Insert(int x) {
 
 void Node::Remove() {
     if(top < 0) {
-        cout << "It is alreay empty " << endl;
+        cout << "It is already empty " << endl;
         return;
     }
     cout << A[top] << " is popped " << endl;
@@ -92,4 +92,4 @@ Output:
 54 is popped 
 32 
 32 is popped 
-It is alreay empty 
+It is already empty 
