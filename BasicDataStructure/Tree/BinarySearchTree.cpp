@@ -5,14 +5,14 @@
   * @date: Jan 2019
   * @bug :
   * @author: sanner
-  *
+  * @reference: https://github.com/whybfq/Kehan-Academy-algorithm/blob/master/BasicDataStructure/List/BasicList.c
   * @CMAKE_CXX_STANDARD 14
   * @IDE:  Clion 2018.2
   * @OS:   macOS 10.14
   *
   * @function_lists:  2 steps
   *  1.   bool Search(BstNode* root, int data)  -> search a number in the tree
-     2.BstNode *Insert(BstNode *root, int data) -> insert a number, return BstNode*
+     2.   BstNode *Insert(BstNode *root, int data) -> insert a number, return BstNode*
   * @history:
      1.@date: Jan 2019
        @author:
