@@ -1,1 +1,1 @@
-Data Structure Visualization : https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
+[Data Structure Visualization](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
