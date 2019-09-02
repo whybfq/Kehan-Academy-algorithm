@@ -2,7 +2,6 @@
 
 
 
-
 '''
 @created Sept 2th, 2562BE
 
@@ -29,13 +28,13 @@ def radix_sort(to_be_sorted):
         # creating the buckets which will be filled with the numbers in being_sorted
         digits = [[] for i in range(10)]
 
+        # selecting the digit at the current iteration index and placing it in the correct bucket
         for item in being_sorted:
             item_as_a_string = str(item)
             try :
                 digit = int(item_as_a_string[index])
             except IndexError:
                 digit = 0
-
             digits[digit].append(item)
 
         being_sorted = []
@@ -47,7 +46,6 @@ def radix_sort(to_be_sorted):
 unsorted_list = [830, 921, 163, 373, 961, 559, 89, 199, 535, 959, 40, 641, 355, 689, 621, 183, 182, 524, 1]
 
 print(radix_sort(unsorted_list))
-
 
 
 Output:
