@@ -28,6 +28,11 @@ def radix_sort(to_be_sorted):
 
     return being_sorted
 
-unsorted_list = [839, 12, 30, 40]
+unsorted_list = [830, 921, 163, 373, 961, 559, 89, 199, 535, 959, 40, 641, 355, 689, 621, 183, 182, 524, 1]
 ordered_list = radix_sort(unsorted_list)
 print(ordered_list)
+
+
+
+Output:
+[1, 40, 89, 163, 182, 183, 199, 355, 373, 524, 535, 559, 621, 641, 689, 830, 921, 959, 961]
