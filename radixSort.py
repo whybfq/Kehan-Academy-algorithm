@@ -2,6 +2,7 @@
 
 
 
+
 '''
 @created Sept 2th, 2562BE
 
@@ -21,7 +22,7 @@ def radix_sort(to_be_sorted):
     max_exponent = len(str(max(to_be_sorted)))
     being_sorted = to_be_sorted[:]
 
-    for exponent in range(max_exponent):
+    for exponent in range(max_exponent): # the maximum is W exponents
         position = exponent + 1
         index = -position
 
@@ -29,7 +30,7 @@ def radix_sort(to_be_sorted):
         digits = [[] for i in range(10)]
 
         # selecting the digit at the current iteration index and placing it in the correct bucket
-        for item in being_sorted:
+        for item in being_sorted:  # N items
             item_as_a_string = str(item)
             try :
                 digit = int(item_as_a_string[index])
@@ -46,6 +47,7 @@ def radix_sort(to_be_sorted):
 unsorted_list = [830, 921, 163, 373, 961, 559, 89, 199, 535, 959, 40, 641, 355, 689, 621, 183, 182, 524, 1]
 
 print(radix_sort(unsorted_list))
+
 
 
 Output:
